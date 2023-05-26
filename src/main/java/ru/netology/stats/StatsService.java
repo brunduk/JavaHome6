@@ -18,11 +18,11 @@ public class StatsService {
     }
 
     public int sumAllSales(int[] sales) {
-        int [] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        //int [] arr = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int sum = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            sum+=arr[i];
+        for (int i = 0; i < sales.length; i++) {
+            sum += sales[i];
         }
 
         return sum;
@@ -31,7 +31,7 @@ public class StatsService {
 
     public int averageSum(int[] sales) {
         int averageSum = sumAllSales(sales);
-        int total = averageSum /12;
+        int total = averageSum / 12;
         return total;
     }
 
@@ -44,17 +44,17 @@ public class StatsService {
         }
 
         return maxSales + 1;
-        }
+    }
 
     public int maxMonthSale(int[] sales) {
         int f = 0;
-       int middle = averageSum(sales);
-       for (int t : sales) {
-           if (t > middle) {
-               f = f +1;
-           }
-       }
-       return f;
+        int middle = averageSum(sales);
+        for (int t : sales) {
+            if (t > middle) {
+                f = f + 1;
+            }
+        }
+        return f;
     }
 
     public int minMonthSale(int[] sales) {
@@ -62,11 +62,11 @@ public class StatsService {
         int middle = averageSum(sales);
         for (int t : sales) {
             if (t > middle) {
-                f = f +1;
+                f = f + 1;
             }
         }
         return f;
     }
-    }
+}
 
 

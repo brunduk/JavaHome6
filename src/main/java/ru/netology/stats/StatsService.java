@@ -47,25 +47,25 @@ public class StatsService {
     }
 
     public int maxMonthSale(int[] sales) {
-        int f = 0;
+        int aboveaverage = 0;
         int middle = averageSum(sales);
         for (int t : sales) {
             if (t > middle) {
-                f = f + 1;
+                aboveaverage = aboveaverage + 1;
             }
         }
-        return f;
+        return aboveaverage;
     }
 
     public int minMonthSale(int[] sales) {
-        int f = 0;
+        int belowaverage = 0;
         int middle = averageSum(sales);
         for (int t : sales) {
-            if (t > middle) {
-                f = f + 1;
+            if (t < middle) {
+                belowaverage = belowaverage + 1;
             }
         }
-        return f;
+        return belowaverage;
     }
 }
 

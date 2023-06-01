@@ -49,8 +49,8 @@ public class StatsService {
     public int maxMonthSale(int[] sales) {
         int aboveaverage = 0;
         int middle = averageSum(sales);
-        for (int t : sales) {
-            if (t > middle) {
+        for (int monthsale : sales) {
+            if (monthsale > middle) {
                 aboveaverage = aboveaverage + 1;
             }
         }
@@ -60,8 +60,8 @@ public class StatsService {
     public int minMonthSale(int[] sales) {
         int belowaverage = 0;
         int middle = averageSum(sales);
-        for (int t : sales) {
-            if (t < middle) {
+        for (int monthsale : sales) {
+            if (monthsale < middle) {
                 belowaverage = belowaverage + 1;
             }
         }
